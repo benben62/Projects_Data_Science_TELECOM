@@ -1,6 +1,6 @@
-echo "start!"
+echo "$(tput setaf 1)Upload Start!"
 git add *
 git commit -m "update"
 git push
 
-echo "finish!"
+echo "$(tput setaf 1)Upload Finish!"
