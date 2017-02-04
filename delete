@@ -1,0 +1,5 @@
+echo "Delete Start!"
+git rm --cached FILENAME
+git commit -m "hehe"
+git push
+echo "Finish!"
