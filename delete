@@ -1,5 +1,5 @@
-echo "Delete Start!"
+echo "$(tput setaf 1)Delete Start!$(tput sgr0)"
 git rm --cached download
 git commit -m "hehe"
 git push
-echo "Delete Finish!"
+echo "$(tput setaf 1)Delete Finish!$(tput sgr0)"
