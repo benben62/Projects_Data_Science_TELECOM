@@ -1,0 +1,9 @@
+createPhoto;;test.jpg;100;200
+displayMediaByName;test.jpg
+
+
+createVideo;;test.mp4;50
+displayMediaByName;test.mp4 
+
+createFilm;;test.3gp;5;3;3;2;1
+displayMediaByName;test.3gp
