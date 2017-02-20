@@ -9,6 +9,7 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
+#include <algorithm>
 #include "tcpserver.h"
 #include "multimedia.h"
 #include "video.h"

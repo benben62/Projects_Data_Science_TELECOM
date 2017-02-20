@@ -22,8 +22,7 @@ void Video::display(ostream &out, bool flag)
 }
 void Video::play() const
 {
-    string str = "open -a mpv "+getnomF()+getnomM()+" &";//for mac
-    //string str = "mpv "+getnomF()+getnomM()+" &";//for lunix
+    string str = "mpv "+getnomF()+getnomM()+" &";//for lunix
     const char *command = str.c_str();
     system(command);
 }
