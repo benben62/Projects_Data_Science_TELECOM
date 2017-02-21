@@ -117,5 +117,6 @@ void Factory::displayAllMedia(ostream &out)
 {
     for (auto it :dictm){
         it.second->display(out);
+        out<<"\n";
     }
 }

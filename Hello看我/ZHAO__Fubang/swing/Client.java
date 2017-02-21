@@ -21,40 +21,40 @@ public class Client
   /// recupere sa reponse et l'affiche sur le Terminal.
   /// Noter que le programme bloque si le serveur ne repond pas.
   ///
-//  public static void main(String argv[]) {
-//    String host = DEFAULT_HOST;
-//    int port = DEFAULT_PORT;
-//    if (argv.length >=1) host = argv[0];
-//    if (argv.length >=2) port = Integer.parseInt(argv[1]);
-//    
-//    Client client = null;
-//    
-//    try {
-//      client = new Client(host, port);
-//    }
-//    catch (Exception e) {
-//      System.err.println("Client: Couldn't connect to "+host+":"+port);
-//      System.exit(1);
-//    }
-//    
-//    System.out.println("Client connected to "+host+":"+port);
-//
-//    // pour lire depuis la console
-//    BufferedReader cin = new BufferedReader(new InputStreamReader(System.in));
-//    
-//    while (true) {
-//      System.out.print("Request: ");
-//      try {
-//        String request = cin.readLine();
-//        String response = client.send(request);
-//        System.out.println("Response: " + response);
-//      }
-//      catch (java.io.IOException e) {
-//        System.err.println("Client: IO error");
-//        return;
-//      }
-//    }
-//  }
+ public static void main(String argv[]) {
+   String host = DEFAULT_HOST;
+   int port = DEFAULT_PORT;
+   if (argv.length >=1) host = argv[0];
+   if (argv.length >=2) port = Integer.parseInt(argv[1]);
+   
+   Client client = null;
+   
+   try {
+     client = new Client(host, port);
+   }
+   catch (Exception e) {
+     System.err.println("Client: Couldn't connect to "+host+":"+port);
+     System.exit(1);
+   }
+   
+   System.out.println("Client connected to "+host+":"+port);
+
+   // pour lire depuis la console
+   BufferedReader cin = new BufferedReader(new InputStreamReader(System.in));
+   
+   while (true) {
+     System.out.print("Request: ");
+     try {
+       String request = cin.readLine();
+       String response = client.send(request);
+       System.out.println("Response: " + response);
+     }
+     catch (java.io.IOException e) {
+       System.err.println("Client: IO error");
+       return;
+     }
+   }
+ }
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -95,6 +95,7 @@ public class Client
     // Envoyer la requete au serveur
     try {
       request += "\n";  // ajouter le separateur de lignes
+      // request = request;
       output.write(request, 0, request.length());
       output.flush();
     }

@@ -36,8 +36,8 @@ void Photo::display(ostream &out, bool flag)
 }
 void Photo::play() const
 {
-    string str = "open -a preview "+getnomF()+getnomM()+" &";//for mac
-    //string str = "imagej"+getnomF()+getnomM()+" &";//for lunix
+    // string str = "open -a preview "+getnomF()+getnomM()+" &";//for mac
+    string str = "imagej "+getnomF()+getnomM()+" &";//for lunix
     const char *command = str.c_str();
     system(command);
 }

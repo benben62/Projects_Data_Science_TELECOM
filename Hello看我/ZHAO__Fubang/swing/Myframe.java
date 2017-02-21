@@ -3,6 +3,7 @@ import java.awt.Container;
 import java.awt.GridLayout;
 import java.awt.event.*;
 import javax.swing.*;
+import javax.swing.text.*;
 
 public class Myframe extends JFrame{
 	static final String DEFAULT_HOST = "localhost";
@@ -98,6 +99,9 @@ public class Myframe extends JFrame{
 		
 		JScrollPane scroll = new JScrollPane(jta = new JTextArea());
 		scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+		scroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		DefaultCaret caret = (DefaultCaret) jta.getCaret();
+		caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
 		jta.setLineWrap(true);
 		jta.setRows(20);
 		hbox2.add(scroll);
