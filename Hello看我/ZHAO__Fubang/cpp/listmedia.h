@@ -20,10 +20,23 @@ public:
     {
 
     }
+    /**
+     * @brief getname
+     * @param 
+     * @return name_group
+     * @detail get the name of group
+     */
     virtual string getname() const
     {
         return name_group;
     }
+    /**
+     * @brief display
+     * @param out, flag
+     * @return
+     * @detail show the information of the media in the list flag is to
+     *         judge if it is used for cout or server
+     */
     virtual void display(ostream& out, bool flag = false) const
     {
         if (flag)

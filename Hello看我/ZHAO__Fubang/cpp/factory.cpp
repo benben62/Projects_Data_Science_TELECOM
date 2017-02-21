@@ -1,5 +1,10 @@
 #include "factory.h"
-
+/**
+ * @brief Factory
+ * @param 
+ * @return 
+ * @detail Create a ifstream and read the media in the "dict_m.txt"
+ */
 Factory::Factory()
 {
     ifstream ifile;
@@ -7,30 +12,60 @@ Factory::Factory()
     this->readFile(ifile);
     ifile.close();
 }
+/**
+ * @brief createPhoto
+ * @param _nomF, _nomM, _latitude, _longitude
+ * @return photo
+ * @detail Create a photo with the parameters, return a smart pointer of photo
+ */
 PhotoPtr Factory::createPhoto(string _nomF, string _nomM, double _latitude, double _longitude)
 {
     PhotoPtr photo(new Photo(_nomF,_nomM, _latitude, _longitude));
     dictm[_nomM] = photo;
     return photo;
 }
+/**
+ * @brief createVideo
+ * @param _nomF, _nomM, _duree
+ * @return video
+ * @detail Create a video with the parameters, return a smart pointer of video
+ */
 VideoPtr Factory::createVideo(string _nomF, string _nomM, int _duree)
 {
     VideoPtr video(new Video(_nomF,_nomM, _duree));
     dictm[_nomM] = video;
     return video;
 }
+/**
+ * @brief createFilm
+ * @param _nomF, _nomM, _duree, *_chap, _num_chap
+ * @return film
+ * @detail Create a film with the parameters, return a smart pointer of film
+ */
 FilmPtr Factory::createFilm(string _nomF, string _nomM, int _duree, int *_chap, int _num_chap)
 {
     FilmPtr film(new Film(_nomF, _nomM, _duree, _chap, _num_chap));
     dictm[_nomM] = film;
     return film;
 }
+/**
+ * @brief createList
+ * @param _name
+ * @return listmedia
+ * @detail Create a listmedia with the parameters, return a smart pointer of listmedia
+ */
 ListMediaPtr<MediaPtr> Factory::createList(string _name)
 {
     ListMediaPtr<MediaPtr> listmedia(new ListMedia<MediaPtr>(_name));
     dictl[_name] = listmedia;
     return listmedia;
 }
+/**
+ * @brief displayMediaByName
+ * @param _nom, out
+ * @return listmedia
+ * @detail Create a listmedia with the parameters, return a smart pointer of listmedia
+ */
 MediaPtr Factory::displayMediaByName(string _nom, ostream &out) const
 {
     auto it = dictm.find(_nom);
