@@ -1,53 +1,49 @@
 ##########################################
 #
-#  Makefile pour client/serveur TCP
+#  Exemple de Makefile
 #  Eric Lecolinet - Reda Dehak - Telecom ParisTech 2015
 #  INF224 - TP C++ - http://www.telecom-paristech.fr/~elc/inf224
-# 
+#
 ##########################################
 
 #
 # Nom du programme
 #
-CLIENT=client
-SERVER=server
-CLISERV=cliserv
+PROG = MyBase
 
 #
-# Fichiers sources (NE PAS METTRE les .h ni les .o mais seulement les .cpp)
+# Fichiers sources (NE PAS METTRE les .h ni les .o seulement les .cpp)
 #
-CLIENT_SOURCES=client.cpp cppsocket.cpp 
-SERVER_SOURCES=server.cpp tcpserver.cpp cppsocket.cpp multimedia.cpp video.cpp photo.cpp film.cpp factory.cpp 
-CLISERV_SOURCES=client.cpp server.cpp tcpserver.cpp cppsocket.cpp multimedia.cpp video.cpp photo.cpp film.cpp factory.cpp Makefile-cliserv
-#
-# Fichiers objets (ne pas modifier, sauf si l'extension n'est pas .cpp)
-#
-CLIENT_OBJETS=${CLIENT_SOURCES:%.cpp=%.o}
-SERVER_OBJETS=${SERVER_SOURCES:%.cpp=%.o}
+SOURCES = server.cpp tcpserver.cpp cppsocket.cpp multimedia.cpp video.cpp photo.cpp film.cpp factory.cpp
 
 #
-# Compilateur C++ (suivant les systemes CXX ou CCC)
+# Fichiers objets (ne pas modifier sauf si l'extension n'est pas .cpp)
 #
-CXX= c++
+OBJETS = ${SOURCES:%.cpp=%.o}
+
+#
+# Compilateur C++
+#
+CXX = c++
 
 #
 # Options du compilateur C++
 #   -g pour debugger, -O optimise, -Wall affiche les erreurs, -I pour les headers
 #   -std=c++11 pour C++11
-# Example: CXXFLAGS= -std=c++11 -Wall -O -I/usr/local/qt/include
+# Exemple: CXXFLAGS= -std=c++11 -Wall -O -I/usr/local/qt/include
 #
-CXXFLAGS= -std=c++11 -Wall -g
+CXXFLAGS = -std=c++11 -Wall -g
 
 #
 # Options de l'editeur de liens
 #
-LDFLAGS= 
+LDFLAGS = 
 
 #
 # Librairies a utiliser
-# Example: LDLIBS = -L/usr/local/qt/lib -lqt
+# Exemple: LDLIBS = -L/usr/local/qt/lib -lqt
 #
-LDLIBS= -lpthread 
+LDLIBS = -lpthread
 
 
 ##########################################
@@ -55,38 +51,30 @@ LDLIBS= -lpthread
 # Regles de construction/destruction des .o et de l'executable
 # depend-${PROG} sera un fichier contenant les dependances
 #
+ 
+all: ${PROG}
 
-all: ${CLIENT} ${SERVER}
+run: ${PROG}
+	./${PROG}
 
-run-${SERVER}: ${SERVER}
-	./${SERVER}
-
-run-${CLIENT}: ${CLIENT}
-	./${CLIENT}
-
-${CLIENT}: depend-${CLIENT} ${CLIENT_OBJETS}
-	${CXX} -o $@ ${CXXFLAGS} ${LDFLAGS} ${CLIENT_OBJETS} ${LDLIBS}
-
-${SERVER}: depend-${SERVER} ${SERVER_OBJETS}
-	${CXX} -o $@ ${CXXFLAGS} ${LDFLAGS} ${SERVER_OBJETS} ${LDLIBS}
+${PROG}: depend-${PROG} ${OBJETS}
+	${CXX} -o $@ ${CXXFLAGS} ${LDFLAGS} ${OBJETS} ${LDLIBS}
 
 clean:
-	-@$(RM) *.o depend-${CLIENT} depend-${SERVER} core 1>/dev/null 2>&1
+	-@$(RM) *.o depend-${PROG} core 1>/dev/null 2>&1
 
 clean-all: clean
-	-@$(RM) -${CLIENT} -${SERVER} 1>/dev/null 2>&1
+	-@$(RM) ${PROG} 1>/dev/null 2>&1
   
 tar:
-	tar cvf ${CLISERV}.tar.gz ${CLISERV_SOURCES} cppsocket.h tcpserver.h
+	tar cvf ${PROG}.tar.gz ${SOURCES}
 
 # Gestion des dependances : creation automatique des dependances en utilisant 
 # l'option -MM de g++ (attention tous les compilateurs n'ont pas cette option)
 #
-depend-${CLIENT}:
-	${CXX} ${CXXFLAGS} -MM ${CLIENT_SOURCES} > depend-${CLIENT}
+depend-${PROG}:
+	${CXX} ${CXXFLAGS} -MM ${SOURCES} > depend-${PROG}
 
-depend-${SERVER}:
-	${CXX} ${CXXFLAGS} -MM ${SERVER_SOURCES} > depend-${SERVER}
 
 ###########################################
 #
@@ -109,5 +97,4 @@ depend-${SERVER}:
 #
 # Inclusion du fichier des dependances
 #
--include depend-${CLIENT}
--include depend-${SERVER}
+-include depend-${PROG}
