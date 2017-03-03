@@ -1,0 +1,5 @@
+Read me
+
+Tous les fichiers sont enregistés dans http://perso.telecom-paristech.fr/~fzhao/tp3/NOM_DE_FICHER
+
+changer NOM_DE_FICHIER pour ce que vous voulez vérifier. Merci beaucoup!

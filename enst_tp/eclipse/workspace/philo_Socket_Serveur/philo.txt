@@ -1,0 +1,5 @@
+philo0 "TING" has eaten for 8times
+philo1 "XIN" has eaten for 5times
+philo2 "BANG" has eaten for 6times
+philo3 "GUO" has eaten for 9times
+philo4 "NAN" has eaten for 8times

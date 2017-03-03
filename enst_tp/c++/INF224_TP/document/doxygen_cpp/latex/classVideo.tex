@@ -1,0 +1,150 @@
+\hypertarget{classVideo}{\section{Video Class Reference}
+\label{classVideo}\index{Video@{Video}}
+}
+
+
+Inheritance diagram for Video\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classVideo__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Video\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classVideo__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classVideo_ae9c2fb1a73fb2882941f6d65100f5fc4}{Video} (string \+\_\+nom\+F=\char`\"{}\char`\"{}, string \+\_\+nom\+M=\char`\"{}\char`\"{}, int \+\_\+duree=0)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classVideo}{Video}. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classVideo_a481a3fe9717c76c2d012498c7a1b08ca}{get\+Duree} () const 
+\begin{DoxyCompactList}\small\item\em get\+Duree \end{DoxyCompactList}\item 
+virtual void \hyperlink{classVideo_a713899ce1fcf112a04ea18f917a60fa2}{set\+Duree} (int \+\_\+duree)
+\begin{DoxyCompactList}\small\item\em set\+Duree \end{DoxyCompactList}\item 
+virtual void \hyperlink{classVideo_a2f1902c8131fc232926e34487b54e0b9}{display} (ostream \&out, bool flag=false)
+\begin{DoxyCompactList}\small\item\em display \end{DoxyCompactList}\item 
+virtual void \hyperlink{classVideo_acb8fdb5186d3b35672b9218375cf4f0b}{play} () const 
+\begin{DoxyCompactList}\small\item\em play \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classVideo_ae9c2fb1a73fb2882941f6d65100f5fc4}{\index{Video@{Video}!Video@{Video}}
+\index{Video@{Video}!Video@{Video}}
+\subsubsection[{Video}]{\setlength{\rightskip}{0pt plus 5cm}Video\+::\+Video (
+\begin{DoxyParamCaption}
+\item[{string}]{\+\_\+nom\+F = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{string}]{\+\_\+nom\+M = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{int}]{\+\_\+duree = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{classVideo_ae9c2fb1a73fb2882941f6d65100f5fc4}
+
+
+\hyperlink{classVideo}{Video}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & return  initializer nom\+Fichier, nom\+Media, duree with parameter and inherit the constructer of multimedia \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classVideo_a2f1902c8131fc232926e34487b54e0b9}{\index{Video@{Video}!display@{display}}
+\index{display@{display}!Video@{Video}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void Video\+::display (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{bool}]{flag = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classVideo_a2f1902c8131fc232926e34487b54e0b9}
+
+
+display 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out,flag} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+show the information of the video, flag is to judge if it is used for cout or server 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classMultimedia_a47176f027bfb92e5374cf34f4c70809a}{Multimedia}.
+
+
+
+Reimplemented in \hyperlink{classFilm_a9f6a67ac8aa1e16501676c70e35d4eb4}{Film}.
+
+\hypertarget{classVideo_a481a3fe9717c76c2d012498c7a1b08ca}{\index{Video@{Video}!get\+Duree@{get\+Duree}}
+\index{get\+Duree@{get\+Duree}!Video@{Video}}
+\subsubsection[{get\+Duree}]{\setlength{\rightskip}{0pt plus 5cm}int Video\+::get\+Duree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classVideo_a481a3fe9717c76c2d012498c7a1b08ca}
+
+
+get\+Duree 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & return duree  get the value of duree \\
+\hline
+\end{DoxyParams}
+\hypertarget{classVideo_acb8fdb5186d3b35672b9218375cf4f0b}{\index{Video@{Video}!play@{play}}
+\index{play@{play}!Video@{Video}}
+\subsubsection[{play}]{\setlength{\rightskip}{0pt plus 5cm}void Video\+::play (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classVideo_acb8fdb5186d3b35672b9218375cf4f0b}
+
+
+play 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & return  show the video \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classMultimedia_ad08d517e03460d941915682e8d0a13be}{Multimedia}.
+
+\hypertarget{classVideo_a713899ce1fcf112a04ea18f917a60fa2}{\index{Video@{Video}!set\+Duree@{set\+Duree}}
+\index{set\+Duree@{set\+Duree}!Video@{Video}}
+\subsubsection[{set\+Duree}]{\setlength{\rightskip}{0pt plus 5cm}void Video\+::set\+Duree (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+duree}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classVideo_a713899ce1fcf112a04ea18f917a60fa2}
+
+
+set\+Duree 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+duree} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set the value of duree 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+video.\+h\item 
+video.\+cpp\end{DoxyCompactItemize}

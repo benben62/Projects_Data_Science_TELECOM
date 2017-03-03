@@ -1,0 +1,48 @@
+\hypertarget{classClient}{\section{Client Class Reference}
+\label{classClient}\index{Client@{Client}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classClient_a163113b9c3fda23dcdc750db9278afbe}{Client} (String host, int port)  throws Unknown\+Host\+Exception, I\+O\+Exception 
+\item 
+String \hyperlink{classClient_ab26831c395da92b5893066f9ce7963a4}{send} (String request)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classClient_ac9fec818083d641b633a8e4a75d981a7}{main} (String argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classClient_a163113b9c3fda23dcdc750db9278afbe}{\index{Client@{Client}!Client@{Client}}
+\index{Client@{Client}!Client@{Client}}
+\subsubsection[{Client}]{\setlength{\rightskip}{0pt plus 5cm}Client.\+Client (
+\begin{DoxyParamCaption}
+\item[{String}]{host, }
+\item[{int}]{port}
+\end{DoxyParamCaption}
+) throws Unknown\+Host\+Exception, I\+O\+Exception\hspace{0.3cm}{\ttfamily [inline]}}}\label{classClient_a163113b9c3fda23dcdc750db9278afbe}
+Initialise la connexion. Renvoie une exception en cas d'erreur. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classClient_ac9fec818083d641b633a8e4a75d981a7}{\index{Client@{Client}!main@{main}}
+\index{main@{main}!Client@{Client}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}static void Client.\+main (
+\begin{DoxyParamCaption}
+\item[{String}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classClient_ac9fec818083d641b633a8e4a75d981a7}
+Lit une requete depuis le Terminal, envoie cette requete au serveur, recupere sa reponse et l'affiche sur le Terminal. Noter que le programme bloque si le serveur ne repond pas. \hypertarget{classClient_ab26831c395da92b5893066f9ce7963a4}{\index{Client@{Client}!send@{send}}
+\index{send@{send}!Client@{Client}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}String Client.\+send (
+\begin{DoxyParamCaption}
+\item[{String}]{request}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classClient_ab26831c395da92b5893066f9ce7963a4}
+Envoie une requete au server et retourne sa reponse. Noter que la methode bloque si le serveur ne repond pas. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Client.\+java\end{DoxyCompactItemize}

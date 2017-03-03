@@ -1,0 +1,18 @@
+package test;
+
+public class ThreadTest extends Thread{
+	static int i=0;
+	public void run()
+	{
+		
+	}
+	public synchronized void out1(){
+		i++;
+	}
+	public synchronized void out2(){
+		i++;
+	}
+	public synchronized void out3(){
+		i++;
+	}
+}

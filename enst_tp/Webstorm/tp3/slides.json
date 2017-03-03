@@ -1,0 +1,28 @@
+{
+  "slides": [
+    {
+      "time": 0,
+      "url": "http://www.telecom-paristech.fr"
+    },
+    {
+      "time": 15,
+      "url": "http://www.mines-paristech.fr"
+    },
+    {
+      "time": 30,
+      "url": "http://www.ensae.fr/ensae/fr/"
+    },
+    {
+      "time": 45,
+      "url": "https://www.ensta-paristech.fr/"
+    },
+    {
+      "time": 60,
+      "url": "https://www.chimie-paristech.fr/"
+    },
+    {
+      "time": 75,
+      "url": ""
+    }
+  ]
+}

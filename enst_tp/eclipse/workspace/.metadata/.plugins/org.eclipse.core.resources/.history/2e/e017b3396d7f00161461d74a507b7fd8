@@ -1,0 +1,54 @@
+package test;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintWriter;
+
+public abstract class RequestProcessor {
+
+	public static void main(String[] args) throws IOException {
+
+	    //创建文件输入流
+	    PrintWriter is = new PrintWriter(new FileWriter("py1.txt"));
+	    //创建字节缓冲
+	    String x = "hhhjhhhjhjjhhj";
+	    is.println(x);
+	    is.close();
+	}
+
+}
+//public class CopyBytes {
+//    /**
+//     * @param args
+//     * @throws IOException
+//     */
+//    public static void main(String[] args) throws IOException {
+//        FileReader in = null;
+//        FileWriter out = null;
+// 
+//        try {
+//            in = new FileReader("py1.txt");
+//            out = new FileWriter("py2.txt");
+//            char[] buff = new char[3];
+//            int c;
+//            char d;
+//           // int d;
+//            while ((c = in.read(buff, 0 ,3)) != -1) {
+//            	d=(char) c;
+//                out.write(c);
+//                System.out.println(buff);
+//            }
+//        } finally {
+//            if (in != null) {
+//                in.close();
+//            }
+//            if (out != null) {
+//                out.close();
+//            }
+//        }
+//    }
+//}

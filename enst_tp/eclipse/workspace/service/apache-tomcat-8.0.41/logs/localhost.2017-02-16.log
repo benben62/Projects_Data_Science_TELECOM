@@ -1,0 +1,2 @@
+16-Feb-2017 15:48:03.137 INFO [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+16-Feb-2017 15:48:03.137 INFO [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()

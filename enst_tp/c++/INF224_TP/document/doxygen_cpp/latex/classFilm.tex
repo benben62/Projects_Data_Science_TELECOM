@@ -1,0 +1,162 @@
+\hypertarget{classFilm}{\section{Film Class Reference}
+\label{classFilm}\index{Film@{Film}}
+}
+
+
+Inheritance diagram for Film\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classFilm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Film\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classFilm__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFilm_ac27cea51ddd9ba34caa4e3b7c57c1135}{Film} (string \+\_\+nom\+F=\char`\"{}\char`\"{}, string \+\_\+nom\+M=\char`\"{}\char`\"{}, int \+\_\+duree=0, int $\ast$\+\_\+chap=0, int \+\_\+num\+\_\+chap=0)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classFilm}{Film}. \end{DoxyCompactList}\item 
+virtual \hyperlink{classFilm_a8dab653f8a6c0635ca5ddbe0bbdd9a25}{$\sim$\+Film} ()
+\begin{DoxyCompactList}\small\item\em $\sim$\+Film \end{DoxyCompactList}\item 
+virtual void \hyperlink{classFilm_a9f6a67ac8aa1e16501676c70e35d4eb4}{display} (ostream \&out, bool flag=false)
+\begin{DoxyCompactList}\small\item\em display \end{DoxyCompactList}\item 
+virtual void \hyperlink{classFilm_a7be11e6206727ca3890cde5ea53b15aa}{set\+Chap} (int $\ast$\+\_\+chap)
+\begin{DoxyCompactList}\small\item\em set\+Chap \end{DoxyCompactList}\item 
+virtual int $\ast$ \hyperlink{classFilm_a12afe1eaee7e1df294ba4f1e35e33666}{get\+Chap} () const 
+\begin{DoxyCompactList}\small\item\em get\+Chap \end{DoxyCompactList}\item 
+virtual int \hyperlink{classFilm_a0966fa9c7b17e2129273f8e10fa4862e}{get\+Numchap} () const 
+\begin{DoxyCompactList}\small\item\em get\+Numchap \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classFilm_ac27cea51ddd9ba34caa4e3b7c57c1135}{\index{Film@{Film}!Film@{Film}}
+\index{Film@{Film}!Film@{Film}}
+\subsubsection[{Film}]{\setlength{\rightskip}{0pt plus 5cm}Film\+::\+Film (
+\begin{DoxyParamCaption}
+\item[{string}]{\+\_\+nom\+F = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{string}]{\+\_\+nom\+M = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{int}]{\+\_\+duree = {\ttfamily 0}, }
+\item[{int $\ast$}]{\+\_\+chap = {\ttfamily 0}, }
+\item[{int}]{\+\_\+num\+\_\+chap = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{classFilm_ac27cea51ddd9ba34caa4e3b7c57c1135}
+
+
+\hyperlink{classFilm}{Film}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & return  initializer nom\+Fichier, nom\+Media, duree, chaptre with parameter and inherit the constructer of video \\
+\hline
+\end{DoxyParams}
+\hypertarget{classFilm_a8dab653f8a6c0635ca5ddbe0bbdd9a25}{\index{Film@{Film}!````~Film@{$\sim$\+Film}}
+\index{````~Film@{$\sim$\+Film}!Film@{Film}}
+\subsubsection[{$\sim$\+Film}]{\setlength{\rightskip}{0pt plus 5cm}Film\+::$\sim$\+Film (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classFilm_a8dab653f8a6c0635ca5ddbe0bbdd9a25}
+
+
+$\sim$\+Film 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & return  Destruct chap \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classFilm_a9f6a67ac8aa1e16501676c70e35d4eb4}{\index{Film@{Film}!display@{display}}
+\index{display@{display}!Film@{Film}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void Film\+::display (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{bool}]{flag = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classFilm_a9f6a67ac8aa1e16501676c70e35d4eb4}
+
+
+display 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out,flag} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+show the information of the filmflag is to judge if it is used for cout or server 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classVideo_a2f1902c8131fc232926e34487b54e0b9}{Video}.
+
+\hypertarget{classFilm_a12afe1eaee7e1df294ba4f1e35e33666}{\index{Film@{Film}!get\+Chap@{get\+Chap}}
+\index{get\+Chap@{get\+Chap}!Film@{Film}}
+\subsubsection[{get\+Chap}]{\setlength{\rightskip}{0pt plus 5cm}int $\ast$ Film\+::get\+Chap (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classFilm_a12afe1eaee7e1df294ba4f1e35e33666}
+
+
+get\+Chap 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & return temp  get the pointer of temp \\
+\hline
+\end{DoxyParams}
+\hypertarget{classFilm_a0966fa9c7b17e2129273f8e10fa4862e}{\index{Film@{Film}!get\+Numchap@{get\+Numchap}}
+\index{get\+Numchap@{get\+Numchap}!Film@{Film}}
+\subsubsection[{get\+Numchap}]{\setlength{\rightskip}{0pt plus 5cm}int Film\+::get\+Numchap (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classFilm_a0966fa9c7b17e2129273f8e10fa4862e}
+
+
+get\+Numchap 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & return num\+\_\+chap  get the number of chap \\
+\hline
+\end{DoxyParams}
+\hypertarget{classFilm_a7be11e6206727ca3890cde5ea53b15aa}{\index{Film@{Film}!set\+Chap@{set\+Chap}}
+\index{set\+Chap@{set\+Chap}!Film@{Film}}
+\subsubsection[{set\+Chap}]{\setlength{\rightskip}{0pt plus 5cm}void Film\+::set\+Chap (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{\+\_\+chap}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classFilm_a7be11e6206727ca3890cde5ea53b15aa}
+
+
+set\+Chap 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & pointer of \+\_\+chap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set the value of chap 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+film.\+h\item 
+film.\+cpp\end{DoxyCompactItemize}

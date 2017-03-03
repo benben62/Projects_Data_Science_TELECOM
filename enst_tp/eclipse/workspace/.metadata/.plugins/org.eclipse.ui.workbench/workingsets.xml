@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1480956810734_2" label="catalog" name="catalog">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/catalog-rest-jersey" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/catalog" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/catalog-dto" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/catalog-rdbms" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/catalog-resource" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/catalog-servlet-sample" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1473939025229_0" label="Window Working Set" name="Aggregate for window 1473939025229"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1474322891006_1" label="Window Working Set" name="Aggregate for window 1474322891006"/>
+</workingSetManager>

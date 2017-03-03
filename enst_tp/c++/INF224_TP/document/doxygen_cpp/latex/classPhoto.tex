@@ -1,0 +1,186 @@
+\hypertarget{classPhoto}{\section{Photo Class Reference}
+\label{classPhoto}\index{Photo@{Photo}}
+}
+
+
+Inheritance diagram for Photo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classPhoto__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Photo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classPhoto__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPhoto_ac927f9690ec0d6901371ea8171f45853}{Photo} (string \+\_\+nom\+F=\char`\"{}\char`\"{}, string \+\_\+nom\+M=\char`\"{}\char`\"{}, double \+\_\+latitude=0, double \+\_\+longitude=0)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classMultimedia}{Multimedia}. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classPhoto_a75f9548586cedcbb6639bc74f7559a46}{get\+Latitude} () const 
+\begin{DoxyCompactList}\small\item\em get\+Latitude \end{DoxyCompactList}\item 
+virtual void \hyperlink{classPhoto_abf629ddab24eb9e5c887ea75b1a283a9}{set\+Latitude} (double \+\_\+latitude)
+\begin{DoxyCompactList}\small\item\em set\+Latitude \end{DoxyCompactList}\item 
+virtual double \hyperlink{classPhoto_a6e2def6e43b3dd8eee78fcafe34dcaff}{get\+Longitude} () const 
+\begin{DoxyCompactList}\small\item\em get\+Longitude \end{DoxyCompactList}\item 
+virtual void \hyperlink{classPhoto_a1352b8982d0f72a82abb3f69d798ea01}{set\+Longitude} (double \+\_\+longitude)
+\begin{DoxyCompactList}\small\item\em set\+Longitude \end{DoxyCompactList}\item 
+virtual void \hyperlink{classPhoto_a7a6e076a522a19422459af9e7f3c958b}{display} (ostream \&out, bool flag=false)
+\begin{DoxyCompactList}\small\item\em display \end{DoxyCompactList}\item 
+virtual void \hyperlink{classPhoto_a34ef1c73e123d2951e8a08b3b1697c05}{play} () const 
+\begin{DoxyCompactList}\small\item\em play \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPhoto_ac927f9690ec0d6901371ea8171f45853}{\index{Photo@{Photo}!Photo@{Photo}}
+\index{Photo@{Photo}!Photo@{Photo}}
+\subsubsection[{Photo}]{\setlength{\rightskip}{0pt plus 5cm}Photo\+::\+Photo (
+\begin{DoxyParamCaption}
+\item[{string}]{\+\_\+nom\+F = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{string}]{\+\_\+nom\+M = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{double}]{\+\_\+latitude = {\ttfamily 0}, }
+\item[{double}]{\+\_\+longitude = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{classPhoto_ac927f9690ec0d6901371ea8171f45853}
+
+
+\hyperlink{classMultimedia}{Multimedia}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & return  initializer nom\+Fichier, nom\+Media with parameter and inherit the constructer of multimedia \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPhoto_a7a6e076a522a19422459af9e7f3c958b}{\index{Photo@{Photo}!display@{display}}
+\index{display@{display}!Photo@{Photo}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void Photo\+::display (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{bool}]{flag = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classPhoto_a7a6e076a522a19422459af9e7f3c958b}
+
+
+display 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out,flag} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+show the information of the photo, flag is to judge if it is used for cout or server 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classMultimedia_a47176f027bfb92e5374cf34f4c70809a}{Multimedia}.
+
+\hypertarget{classPhoto_a75f9548586cedcbb6639bc74f7559a46}{\index{Photo@{Photo}!get\+Latitude@{get\+Latitude}}
+\index{get\+Latitude@{get\+Latitude}!Photo@{Photo}}
+\subsubsection[{get\+Latitude}]{\setlength{\rightskip}{0pt plus 5cm}double Photo\+::get\+Latitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classPhoto_a75f9548586cedcbb6639bc74f7559a46}
+
+
+get\+Latitude 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & return latitude  get the value of latitude \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPhoto_a6e2def6e43b3dd8eee78fcafe34dcaff}{\index{Photo@{Photo}!get\+Longitude@{get\+Longitude}}
+\index{get\+Longitude@{get\+Longitude}!Photo@{Photo}}
+\subsubsection[{get\+Longitude}]{\setlength{\rightskip}{0pt plus 5cm}double Photo\+::get\+Longitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classPhoto_a6e2def6e43b3dd8eee78fcafe34dcaff}
+
+
+get\+Longitude 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & return longitude  get the value of longitude \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPhoto_a34ef1c73e123d2951e8a08b3b1697c05}{\index{Photo@{Photo}!play@{play}}
+\index{play@{play}!Photo@{Photo}}
+\subsubsection[{play}]{\setlength{\rightskip}{0pt plus 5cm}void Photo\+::play (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classPhoto_a34ef1c73e123d2951e8a08b3b1697c05}
+
+
+play 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & return  show the photo \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classMultimedia_ad08d517e03460d941915682e8d0a13be}{Multimedia}.
+
+\hypertarget{classPhoto_abf629ddab24eb9e5c887ea75b1a283a9}{\index{Photo@{Photo}!set\+Latitude@{set\+Latitude}}
+\index{set\+Latitude@{set\+Latitude}!Photo@{Photo}}
+\subsubsection[{set\+Latitude}]{\setlength{\rightskip}{0pt plus 5cm}void Photo\+::set\+Latitude (
+\begin{DoxyParamCaption}
+\item[{double}]{\+\_\+latitude}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classPhoto_abf629ddab24eb9e5c887ea75b1a283a9}
+
+
+set\+Latitude 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+latitude} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set the value of latitude 
+\end{DoxyReturn}
+\hypertarget{classPhoto_a1352b8982d0f72a82abb3f69d798ea01}{\index{Photo@{Photo}!set\+Longitude@{set\+Longitude}}
+\index{set\+Longitude@{set\+Longitude}!Photo@{Photo}}
+\subsubsection[{set\+Longitude}]{\setlength{\rightskip}{0pt plus 5cm}void Photo\+::set\+Longitude (
+\begin{DoxyParamCaption}
+\item[{double}]{\+\_\+longitude}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classPhoto_a1352b8982d0f72a82abb3f69d798ea01}
+
+
+set\+Longitude 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+longitude} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set the value of longitude 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+photo.\+h\item 
+photo.\+cpp\end{DoxyCompactItemize}
