@@ -7,26 +7,50 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 import java.util.TreeMap;
 
+// address of tp: https://docs.google.com/document/d/1Gp2O1Vwg4UPUOhEr4Sw8uDVieLi3E_-ySaGXbsDKrvo/edit
 public class Main {
-	public static TreeMap<String, Integer> countDistinctWords(String s){
+	
+	public static Boolean containPronoms(String source){
+		Set<String> uniqueKeySet = new HashSet<String>(Arrays.asList("il","elle", "ils", "elles", "je",
+				"tu", "vous", "nous", "on", "les", "leur", "lui", "la", "le", "l", "des", "de", "ou", 
+				"celui", "celle", "celui-ci", "celui-là", "celle-ci", "celle-là", "ceci", "cela", "ça",
+				"ceux", "ceux-ci", "ceux-là", "celles-ci", "celles-là", "tous", "tout", "rien", "personne",
+				"et", "qui", "que", "ne", "aux", "dont", "au", "en", "à", "du", "d", "s"));
+		if (uniqueKeySet.contains(source))
+			return true;
+		else
+			return false;
+		
+	}
+	
+	public static TreeMap<String, Integer> countDistinctWords(String s, Boolean filterPro){
 		String[] splitted = s.split(" ");
 		TreeMap<String, Integer> hm = new TreeMap<String, Integer>();
 		int x;
 		
 		for (int i=0; i<splitted.length ; i++) {
-		   if (hm.containsKey(splitted[i])) {
-		       x = ((Integer)hm.get(splitted[i])).intValue();
-		       hm.put(splitted[i], new Integer(x+1));
-		   }else{
-			   hm.put(splitted[i], 1);  
-		   }
+			if (filterPro && containPronoms(splitted[i]))
+				continue;
+		    if (hm.containsKey(splitted[i])) {
+		        x = ((Integer)hm.get(splitted[i])).intValue();
+		        hm.put(splitted[i], new Integer(x+1));
+		    }else{
+			    hm.put(splitted[i], 1);  
+		    }
 		}
 		return hm;
+	}
+	
+	public static TreeMap<String, Integer> countDistinctWords(String s){
+		return countDistinctWords(s, false);
 	}
 
 	public static String filterCharacter(String s){
@@ -86,9 +110,11 @@ public class Main {
 		  sorted = sortByValues(firstN);
 		  return sorted;
 	}
+	
+
 	public static void main(String[] args) throws FileNotFoundException, IOException {
 		// TODO Auto-generated method stub
-		int question = 6;
+		int question = 4;
 		String test = null;
 		switch(question){
 			case 1:
@@ -118,7 +144,46 @@ public class Main {
 				System.out.println(firstN);
 				break;
 			case 7:
-				
+			case 8:
+				test = readFile("forestier_mayotte.txt");
+				String filtered3 = filterCharacter(test);
+				TreeMap<String, Integer> sorted1 = sortByValues(countDistinctWords(filtered3, true));
+				TreeMap<String, Integer> firstN1 = putFirstEntries(50, sorted1);
+				System.out.println(firstN1);
+				break;
+			case 9:
+				test = readFile("deontologie_police_nationale.txt");
+				String filtered4 = filterCharacter(test);
+				TreeMap<String, Integer> sorted2 = sortByValues(countDistinctWords(filtered4, true));
+				TreeMap<String, Integer> firstN2 = putFirstEntries(50, sorted2);
+				System.out.println(firstN2);
+				break;
+			case 10:
+				test = readFile("domaine_public_fluvial.txt");
+				String filtered5 = filterCharacter(test);
+				TreeMap<String, Integer> sorted3 = sortByValues(countDistinctWords(filtered5, true));
+				TreeMap<String, Integer> firstN3 = putFirstEntries(50, sorted3);
+				System.out.println(firstN3);
+				break;
+			case 11:
+			case 12:
+				test = readFile("sante_publique.txt");
+				long startTime = System.currentTimeMillis();
+				String filtered6 = filterCharacter(test);
+				long filterTime   = System.currentTimeMillis();
+				TreeMap<String, Integer> count4 = countDistinctWords(filtered6, true);
+				long countTime   = System.currentTimeMillis();
+				TreeMap<String, Integer> sorted4 = sortByValues(count4);
+				long sortTime   = System.currentTimeMillis();
+				TreeMap<String, Integer> firstN4 = putFirstEntries(50, sorted4);
+				long totalTime   = System.currentTimeMillis();
+				System.out.println(firstN4);
+				System.out.println(filterTime - startTime);
+				System.out.println(countTime - startTime);
+				System.out.println(sortTime - startTime);
+				System.out.println(totalTime - startTime);
+				break;
+
 		}
 	}
 
