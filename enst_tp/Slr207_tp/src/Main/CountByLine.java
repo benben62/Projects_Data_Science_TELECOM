@@ -89,6 +89,6 @@ public class CountByLine {
 		System.out.println("Time of sorting: " + (endTime - readTime)/1000. + "s");
 		System.out.println("The total Time : " + (endTime - startTime)/1000. + "s");
 		System.out.println(sorted);
-		writeFile("question13.txt", sorted, startTime, readTime, endTime);
+		writeFile("question13ll.txt", sorted, startTime, readTime, endTime);
 	}
 }

@@ -49,6 +49,6 @@ as = 84985
 from = 83871
 are = 83174
 -----Time-----
-Time of Reading: 19.635s
-Time of sorting: 21.881s
-The total Time : 41.516s
+Time of Reading: 56.768s
+Time of sorting: 16.632s
+The total Time : 73.4s

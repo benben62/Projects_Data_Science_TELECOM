@@ -1,14 +1,21 @@
 package Main;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -96,10 +103,10 @@ public class Main {
 	    return sortedByValues;
 	}
 	
-	public static TreeMap<String, Integer> putFirstEntries(int max, TreeMap<String, Integer> source) {
+	public static TreeMap<String, Integer> putFirstEntries(int max, Map<String, Integer> map) {
 		  int count = 0;
 		  TreeMap<String, Integer> firstN = new TreeMap<String, Integer>();
-		  for (Entry<String, Integer> entry:source.entrySet()) {
+		  for (Entry<String, Integer> entry:map.entrySet()) {
 		     if (count >= max) break;
 
 		     firstN.put(entry.getKey(), entry.getValue());
@@ -111,10 +118,24 @@ public class Main {
 		  return sorted;
 	}
 	
+	public static void writeFile(String filename, TreeMap<String, Integer> res, long startTime, long readTime, long endTime) throws IOException{
+		File fout = new File(filename);
+		FileOutputStream fos = new FileOutputStream(fout);
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
+		for(Entry<String, Integer> entry : res.entrySet()){
+			bw.write(entry.getKey() + " = " + entry.getValue() + "\n");
+		}
+		bw.write("-----Time-----\n");
+		bw.write("Time of Reading: " + (readTime - startTime)/1000. + "s\n");
+		bw.write("Time of sorting: " + (endTime - readTime)/1000. + "s\n");
+		bw.write("The total Time : " + (endTime - startTime)/1000. + "s\n");
+		bw.close();
+	}
+	
 
-	public static void main(String[] args) throws FileNotFoundException, IOException {
+	public static void main(String[] args) throws FileNotFoundException, IOException, InterruptedException {
 		// TODO Auto-generated method stub
-		int question = 4;
+		int question = 17;
 		String test = null;
 		switch(question){
 			case 1:
@@ -182,6 +203,43 @@ public class Main {
 				System.out.println(countTime - startTime);
 				System.out.println(sortTime - startTime);
 				System.out.println(totalTime - startTime);
+				break;
+			case 16:
+			case 17:
+				startTime = System.currentTimeMillis();
+				int numThread = 4;
+				String fileP = "CC-MAIN-20170322212949-00140-ip-10-233-31-227.ec2.internal.warc.wet";
+				CountParallel[] counters= new CountParallel[numThread];
+				for (int i=0;i<numThread;i++){
+					counters[i] =new CountParallel(fileP, numThread);
+				}
+				for (int i=0;i<numThread;i++){
+					counters[i].start();
+				}
+				for (int i=0;i<numThread;i++){
+					counters[i].join();
+				}
+				TreeMap<String, Integer> res = counters[0].getResult();
+				long readTime = System.currentTimeMillis();
+				for (int i=1;i<numThread;i++){
+					TreeMap<String, Integer> tmp = counters[i].getResult();
+					for (String k : tmp.keySet()) {
+					    if (res.containsKey(k))
+					    	res.put(k, res.get(k) + tmp.get(k));
+					    else
+					    	res.put(k, tmp.get(k));
+					    	
+					} 
+				}
+				long mergeTime = System.currentTimeMillis();
+				TreeMap<String, Integer> sorted11 = putFirstEntries(50, sortByValues(res));
+				long endTime = System.currentTimeMillis();
+				System.out.println("Time of Reading: " + (readTime - startTime)/1000. + "s");
+				System.out.println("Time of merging: " + (mergeTime - readTime)/1000. + "s");
+				System.out.println("Time of sorting: " + (endTime - mergeTime)/1000. + "s");
+				System.out.println("The total Time : " + (endTime - startTime)/1000. + "s");
+				System.out.println(sorted11);
+				writeFile("question13.txt", sorted11, startTime, readTime, endTime);
 				break;
 
 		}
