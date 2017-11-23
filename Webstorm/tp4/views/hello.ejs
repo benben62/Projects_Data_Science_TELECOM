@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>My hello page</title>
+    <style>
+      table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+      }
+      th, td {
+          padding: 5px;
+          text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <main>
+        <div><h1>Template Test!</h1></div>
+    </main>
+    <table>
+      <tr>
+        <th colspan="0">name</th>
+        <th colspan="1">language</th>
+      </tr>
+      <% visiters.forEach(function(visiter) { %>
+        <tr>
+              <td><%= visiter.name %></td>
+              <td><%= visiter.language %></td>
+        </tr>
+      <% }); %>
+    </table>
+</body>
+</html>

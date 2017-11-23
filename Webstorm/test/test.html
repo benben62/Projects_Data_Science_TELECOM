@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<rect id='R' width="120" height="50" fill="blue">
+<script>
+function doAnimation(){
+  var rect=document.getElementById('R');
+  x=x+xincr;
+  rect.setAttribute('x', x);
+  window.setTimeout("doAnimation()", 10);
+}
+</script>
+</body>
+</html>
